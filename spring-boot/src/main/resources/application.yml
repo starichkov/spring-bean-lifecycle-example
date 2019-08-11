@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Spring Boot bean's lifecycle example
+
+custom:
+  properties:
+    property1: Sample property 1 for sample bean
+    property2: Sample property 2 for sample bean
