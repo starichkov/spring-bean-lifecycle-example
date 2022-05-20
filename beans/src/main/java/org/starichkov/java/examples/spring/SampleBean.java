@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
 public class SampleBean implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,
     InitializingBean, BeanPostProcessor, DisposableBean {
 
-  private String sampleProperty1;
+  private final String sampleProperty1;
   private String sampleProperty2;
 
   /**

@@ -8,27 +8,9 @@
     <groupId>org.starichkov.java.examples</groupId>
     <artifactId>spring-bean-lifecycle-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../</relativePath>
   </parent>
 
   <artifactId>spring-boot</artifactId>
-
-  <properties>
-    <java.version>1.8</java.version>
-    <spring.boot.version>1.5.22.RELEASE</spring.boot.version>
-  </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${spring.boot.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -55,23 +37,6 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${spring.boot.version}</version>
       </plugin>
-
-      <!--<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>3.1.0</version>
-        <configuration>
-          <filesets>
-            <fileset>
-              <directory>${project.basedir}</directory>
-              <includes>
-                <include>**/.attach_pid*</include>
-              </includes>
-              <followSymlinks>false</followSymlinks>
-            </fileset>
-          </filesets>
-        </configuration>
-      </plugin>-->
     </plugins>
   </build>
 </project>

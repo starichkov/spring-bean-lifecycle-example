@@ -22,3 +22,11 @@ On deal, Spring calls these methods in a following order:
 1. Both `postProcessBeforeInitialization()` and `postProcessAfterInitialization()` for each bean
 
 Run this example to see it yourself in the output log.
+
+### Technical details
+
+| Language/Library/Framework | Version |
+|----------------------------|---------|
+| Java                       | 11      |
+| Spring                     | 5.3.x   |
+| Spring Boot                | 2.5.x   |

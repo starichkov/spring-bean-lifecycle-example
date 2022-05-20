@@ -16,6 +16,6 @@ public class SpringBeansLifecycleApplication {
 
     log.info("Do some really cool stuff...");
 
-    context.destroy();
+    context.close();
   }
 }

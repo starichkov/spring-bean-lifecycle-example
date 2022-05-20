@@ -17,33 +17,24 @@
   <packaging>pom</packaging>
 
   <properties>
-    <lombok.version>1.18.8</lombok.version>
-    <slf4j.version>1.7.27</slf4j.version>
-    <spring.version>4.3.25.RELEASE</spring.version>
-    <spring.boot.version>1.5.22.RELEASE</spring.boot.version>
+    <java.version>11</java.version>
+    <spring.boot.version>2.5.13</spring.boot.version>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.targetEncoding>UTF-8</project.build.targetEncoding>
+
+    <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+    <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-beans</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>${lombok.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-log4j12</artifactId>
-        <version>${slf4j.version}</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring.boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -54,19 +45,9 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.1</version>
+          <version>${maven.compiler.plugin.version}</version>
           <configuration>
-            <encoding>UTF-8</encoding>
-            <source>1.8</source>
-            <target>1.8</target>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.1.0</version>
-          <configuration>
-            <encoding>UTF-8</encoding>
+            <release>${java.version}</release>
           </configuration>
         </plugin>
       </plugins>
